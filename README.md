@@ -9,7 +9,7 @@ Documenting my journey from Linux foundations to AWS Certified Cloud Engineer.
 AWS Certified Solutions Architect – Associate + Cloud Engineer role by early 2027.
 
 ## 📍 Current Phase
-**Phase 1 — Linux Foundations (Week 1 — Day 1 Complete)**
+**Phase 1 — Linux Foundations (Week 1 — Day 2 Complete)**
 
 ## 📅 Progress Log
 
@@ -18,20 +18,27 @@ AWS Certified Solutions Architect – Associate + Cloud Engineer role by early 2
 | 3 Mar 2026 | Set up GitHub learning journal | ✅ Done |
 | 3 Mar 2026 | Installed Git Bash on Windows | ✅ Done |
 | 3 Mar 2026 | First terminal session — pwd, ls, cd, mkdir, touch, cat, echo, cp, mv, rm | ✅ Done |
-| 3 Mar 2026 | Learned Linux file paths — /c/Users vs ~ vs / | ✅ Done |
-| 3 Mar 2026 | Discovered: spaces in filenames break commands — use hyphens | ✅ Done |
-| 3 Mar 2026 | Learned ls flags: -l, -a, -la and how to read permissions | ✅ Done |
+| 3 Mar 2026 | Learned Linux file paths, flags, and permission strings | ✅ Done |
+| 4 Mar 2026 | Lesson 1 — Navigation & file system structure | ✅ Done |
+| 4 Mar 2026 | Lesson 2 — Creating, reading & editing files | ✅ Done |
+| 4 Mar 2026 | Lesson 3 — Copy, move, delete | ✅ Done |
+| 4 Mar 2026 | Exercise 1 — Navigate Like a Pro | ✅ Done |
+| 4 Mar 2026 | Exercise 2 — Build study notes file | ✅ Done |
+| 4 Mar 2026 | Exercise 3 — Cloud project folder structure | ✅ Done |
+| 4 Mar 2026 | Exercise 4 — File operations drill | ✅ Done |
+| 4 Mar 2026 | Lessons 4–6 + Exercises 5–10 + Boss Challenge | ⏳ This week |
 
 ## 🧠 Key Things I Learned Today
-- `pwd` = print working directory — always know where you are
-- `~` = home folder shortcut, `..` = go up one level, `.` = current folder
-- `>` overwrites a file, `>>` appends to it — never mix these up
-- `rm` has no recycle bin — deleted files are gone permanently
-- Linux is case-sensitive — `Documents` and `documents` are different folders
-- Spaces in filenames require quotes — better to just use hyphens
+- `mkdir -p` creates nested folders in one command
+- `~` is home — `~/cloudproject` is always absolute, `archive` is relative to where you are
+- You can't copy a folder into itself — go up one level first with `cd ..`
+- `>` overwrites, `>>` appends — double-check before writing to important files
+- `wc -l` counts lines, `head -n` shows top lines, `tail -n` shows bottom lines
+- Always check `pwd` before running cp, mv or rm so you know exactly where you are
 
-## 📚 Week 1 Commands Learned
-`pwd` `ls` `ls -la` `cd` `mkdir` `touch` `echo` `cat` `cp` `mv` `rm`
+## 📚 Commands Learned So Far
+`pwd` `ls` `ls -la` `cd` `cd ..` `cd ~` `cd -` `mkdir` `mkdir -p`
+`touch` `echo` `cat` `head` `tail` `wc -l` `cp` `cp -r` `mv` `rm`
 
 ## 🛠 Environment
 - OS: Windows 11 + Git Bash
