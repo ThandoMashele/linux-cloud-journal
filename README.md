@@ -44,6 +44,10 @@ A complete command-line study tracker including:
 - `grep` searches across all notes files
 - Progress log with 2 study sessions recorded
 
+  ## 📸 Boss Challenge Screenshots
+![Study Tracker Structure](Screenshot__38_.png)
+![Search Results & Progress Log](Screenshot__39_.png)
+
 ## 🧠 Key Things I Learned
 - `pwd` = print working directory — always know where you are
 - `~` = home, `..` = up one level, `.` = current folder
