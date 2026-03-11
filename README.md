@@ -9,7 +9,7 @@ Documenting my journey from Linux foundations to AWS Certified Cloud Engineer.
 AWS Certified Solutions Architect – Associate + Cloud Engineer role by early 2027.
 
 ## 📍 Current Phase
-**Phase 1 — Linux Foundations (Week 1 Complete ✅ — Starting Document 2 Tomorrow)**
+**Phase 1 — Linux Foundations (Week 2 In Progress — Days 3 & 4 Complete ✅)**
 
 ## 📅 Progress Log
 
@@ -33,6 +33,12 @@ AWS Certified Solutions Architect – Associate + Cloud Engineer role by early 2
 | 6 Mar 2026 | Exercise 9 — First scripts (hello, counter, files, info, greet) | ✅ Done |
 | 9 Mar 2026 | Exercise 10 — Automated backup script | ✅ Done |
 | 9 Mar 2026 | Boss Challenge — Built full study tracker from scratch | ✅ Done |
+| 11 Mar 2026 | Day 3 — Text processing: grep advanced, pipes, sed, awk | ✅ Done |
+| 11 Mar 2026 | Exercise 1 — grep the server log (grep -c, -n, -v, -i) | ✅ Done |
+| 11 Mar 2026 | Exercise 2 — Pipe challenge (sort, uniq -c, wc -l) | ✅ Done |
+| 11 Mar 2026 | Exercise 3 — sed and awk (find/replace, extract columns) | ✅ Done |
+| 11 Mar 2026 | Day 4 — Processes, packages, users | ✅ Done |
+| 11 Mar 2026 | Exercise 4 — Processes and permissions drill (ps, uptime, chmod) | ✅ Done |
 
 ## 🏆 Boss Challenge — What I Built
 A complete command-line study tracker including:
@@ -43,14 +49,16 @@ A complete command-line study tracker including:
 - Dated backup: `backups/2026-03-09/` created automatically with `$(date)`
 - `grep` searches across all notes files
 - Progress log with 2 study sessions recorded
-  
 
 ## 📸 Boss Challenge Screenshots
 ![Study Tracker Structure](Screenshot__38_.png)
 ![Search Results & Progress Log](Screenshot__39_.png)
 
+---
 
 ## 🧠 Key Things I Learned
+
+### Week 1 — Foundations
 - `pwd` = print working directory — always know where you are
 - `~` = home, `..` = up one level, `.` = current folder
 - `>` overwrites, `>>` appends — never mix these up
@@ -60,7 +68,6 @@ A complete command-line study tracker including:
 - `mkdir -p` creates nested folders in one command
 - Always check `pwd` before cp, mv or rm
 - You can't copy a folder into itself — go up one level first
-- `grep -B/-A` shows context lines around matches
 - Bash variables: no spaces around `=` ever
 - `if` closes with `fi`, `for` closes with `done`
 - `[ "$var" = "value" ]` needs spaces inside brackets
@@ -72,13 +79,35 @@ A complete command-line study tracker including:
 - `$HOME` is safer than `~` when username has spaces
 - `read -p "question" VARIABLE` gets input from user
 
+### Week 2 — Text Processing & Processes
+- `grep -c` counts matches, `grep -v` inverts, `grep -n` shows line numbers, `grep -i` ignores case
+- `^` in grep means start of line — `grep '^ERROR'` only matches lines that START with ERROR
+- Pipe `|` chains commands — output of each feeds into the next as input
+- `uniq` must be paired with `sort` first — it only removes adjacent duplicates
+- `sed 's/A/B/g'` replaces all occurrences — without `g` it only replaces the first on each line
+- `sed` does NOT edit the original file — redirect with `>` to save the result
+- `awk` splits on spaces — `$1` = first word, `$2` = second, `$NF` = last word
+- `NR==2` in awk means "only process line 2" — useful for skipping headers
+- Every process has a PID — use `ps aux | grep name` to find it
+- `kill PID` stops a process, `kill -9 PID` force-stops it
+- `chmod 600` = private file (owner only), `chmod 700` = private folder
+
 ## 📚 Commands Learned
+
+### Week 1
 `pwd` `ls` `ls -la` `cd` `cd ..` `cd ~` `cd -` `mkdir` `mkdir -p`
 `touch` `echo` `cat` `head` `tail` `wc -l` `cp` `cp -r` `mv` `rm` `rm -i`
 `chmod` `find` `grep` `grep -r` `grep -i` `grep -n` `grep -c` `grep -v`
 `grep -B` `grep -A` `pipe |` `>` `>>` `wc` `sort` `date`
 
+### Week 2 — Days 3 & 4
+`grep -c` `grep -v` `grep -n` `grep -i` `sort` `uniq` `uniq -c`
+`sed 's/A/B/g'` `sed '/X/d'` `awk '{print $N}'` `awk '$N=="X"'`
+`ps` `ps aux` `top` `kill` `kill -9` `pkill` `uptime` `whoami` `id`
+
 ## 🛠 Scripts Written
+
+### Week 1
 - `hello.sh` — prints name, course and career goal
 - `counter.sh` — counts from 1 to 10 with a for loop
 - `files.sh` — loops through .txt files and prints each name
@@ -87,6 +116,21 @@ A complete command-line study tracker including:
 - `backup.sh` — copies cloudproject to dated backup folder
 - `scripts.sh` — logs study sessions to progress.log
 - `backup-notes.sh` — backs up notes to dated folder automatically
+
+### Week 2 — Days 3 & 4
+- No new scripts this week — exercises used one-liners and piped commands directly in the terminal
+
+## 📁 Repository Structure
+```
+linux-cloud-journal/
+├── week1/
+│   ├── exercise6/          (hello.sh, counter.sh, files.sh, info.sh, greet.sh, backup.sh)
+│   └── study-tracker/      (scripts.sh, backup-notes.sh, progress.log, notes/)
+├── week2/
+│   ├── day3/               (server.log, fixed.log, warnings.log)
+│   └── day4/               (permissions drill files)
+└── README.md
+```
 
 ## 🛠 Environment
 - OS: Windows 11 + Git Bash
